@@ -12,7 +12,7 @@ int main() {
     scanf("%d", &size);
     
 
-    arr = (struct Something *)malloc(sizeof(struct Something) *  );
+    arr = (struct Something *)malloc(sizeof(struct Something) * size);
 
     for (i = 0; i < size; i++) {
         printf("arr[%d].a : ", i);
