@@ -245,13 +245,25 @@ int rbtree_erase(rbtree *t, node_t *p) {
 }
 
 int rbtree_to_array(const rbtree *t, key_t *arr, const size_t n) {
+/*
+tree_to_array(tree, array, n)
+
+RB tree의 내용을 key 순서대로 주어진 array로 변환
+array의 크기는 n으로 주어지며 tree의 크기가 n 보다 큰 경우에는 순서대로 n개 까지만 변환
+array의 메모리 공간은 이 함수를 부르는 쪽에서 준비하고 그 크기를 n으로 알려줍니다.
+*/
+  node_t *tmp = t->root;
+
+
+
   // TODO: implement to_array
-  // node_t *tmp = t->root;
   
   // //가장 작은 값 찾기
-  // while (tmp != t->nil) {
-  //   tmp = tmp->left;
-  // }
+  while (tmp != t->nil) {
+        tmp = tmp->left;
+
+    if (tmp -> left != )
+  }
 
   // //현재 저장된 개수
   // int count = 0;
@@ -267,6 +279,7 @@ int rbtree_to_array(const rbtree *t, key_t *arr, const size_t n) {
   //   tmp = tmp->parent;
   //   arr[count] = tmp->key;
   //   count++;
+
 
   //   //오른쪽 노드
   // }
