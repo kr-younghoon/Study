@@ -2,19 +2,33 @@ import React, { useState } from 'react';
 import './ExpenseForm.css';
 
 const ExpenseForm = () => {
-    const [enteredTitle, setEnteredTitle] = useState('');
-    const [enteredAmount, setEnteredAmount] = useState('');
-    const [enteredDate, setEnteredDate] = useState('');
-    // document.getElementById('').addEventListener('click',(event) => {})
-    
+    // const [enteredTitle, setEnteredTitle] = useState('');
+    // const [enteredAmount, setEnteredAmount] = useState('');
+    // const [enteredDate, setEnteredDate] = useState('');
+    // -> 이렇게 말고도 객체로 표현이 가능하다.
+    const [userInput, setUserInput] = useState({
+        enteredTitle: '',
+        enteredAmount: '',
+        enteredDate: '',
+    });
+
     const titleChangeHadler = (event) => {
-        setEnteredTitle(event.target.value);
+        setUserInput({
+            ...userInput,
+            enteredTitle: event.target.value,
+        });
     };
     const amountChangeHandler = (event) => {
-        setEnteredAmount(event.target.value);
+        setEnteredAmount({
+            ...userInput,
+            enteredAmount: event.target.value,
+        });
     };
     const dateChangeHandler = (event) => {
-        setEnteredDate(event.target.value);
+        setEnteredDate({
+            ...userInput,
+            enteredDate: event.target.value
+        });
     };
 
     return (
