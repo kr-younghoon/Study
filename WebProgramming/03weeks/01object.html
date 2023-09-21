@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script>
+            function change() {
+                var p = document.getElementById('secondP');
+                window.alert('안녕하세요'); // window가 생략되있는거당. alert은 메서드!
+                let name = window.prompt('이름을 입력하세요', '0');
+                p.innerHTML = name;
+            }
+            function changeImg() {
+                let pimg = document.getElementById('threeP');
+                pimg.innerHTML = '<img src=puppy.jpg>';
+            }
+        </script>
+    </head>
+    <body>
+        <h2 onclick="changeImg()">innerHtml 활용 : 아래 글자 클릭!</h2>
+        <hr />
+        <p class="firstP" onmouseover="change()">
+            <span style="color: red"> 클릭하세요 </span>
+        </p>
+        <p id="secondP"></p>
+        <p id="threeP"></p>
+    </body>
+</html>

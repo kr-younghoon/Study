@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function change() {
+            var spanArray = document.getElementsByTagName("span");
+            for (var i = 0; i < spanArray.length; i++) {
+                var s = spanArray[i];
+                s.style.color = "red";
+                s.style.fontsize = "25px";
+                
+            }
+        }
+    </script> 
+</head>
+<body>
+    <h3> 내가 좋아하는 과일 
+        <button onclick="change()"> 누르세요 </button>
+    </h3>
+    저는 빨간 <span>사과</span>를 좋아하고, <span>바나나</span>도 무척 좋아합니다.
+</body>
+</html>
